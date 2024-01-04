@@ -33,6 +33,9 @@
     "url": "https://github.com/alex-titarenko/electron-windows-store/issues"
   },
   "homepage": "https://github.com/alex-titarenko/electron-windows-store#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
