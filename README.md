@@ -1,5 +1,4 @@
 # Electron Apps in the Windows Store
-<a href="https://david-dm.org/catalystcode/electron-windows-store" title="Dependency status"><img src="https://david-dm.org/catalystcode/electron-windows-store.svg"/></a> <a href="https://www.npmjs.com/package/electron-windows-store"><img src="https://badge.fury.io/js/electron-windows-store.svg" alt="npm version" height="18"></a> <a href="https://ci.appveyor.com/project/felixrieseberg/electron-windows-store"><img src="https://ci.appveyor.com/api/projects/status/jd5fn0ryk3a7v7i3/branch/master?svg=true" /></a>
 
 Electron-Windows-Store: A CLI that takes the packaged output of your Electron app, then converts it into an AppX package. This allows you to submit your Electron app to the Windows Store :package:. You can also distribute your app as an `.appx` without using the Windows Store, allowing users to just double-click your `.appx` to automatically install it.
 
