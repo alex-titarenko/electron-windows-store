@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    branches: [ master ]
+
+# Sets permissions of the GITHUB_TOKEN to allow semantic releases
+permissions:
+  contents: write # Needed for semantic-release to push tags, etc
+  issues: write # Needed for semantic-release to create new issues
+  id-token: write # This is required for requesting the JWT
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: install dependencies
+      run: npm ci
+
+    - name: test
+      run: npm test
+
+    - name: release
+      run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
